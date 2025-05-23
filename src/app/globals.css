@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 200 100% 96%; /* Very pale sky blue, serves as a base for components */
+    --foreground: 210 25% 30%; /* Dark grayish blue for text */
+    --card: 0 0% 100%; /* White for cards */
+    --card-foreground: 210 25% 30%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 25% 30%;
+    --primary: 190 70% 55%; /* Pleasant tealish blue */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+    --secondary: 130 50% 65%; /* Soft, slightly desaturated green */
+    --secondary-foreground: 130 30% 20%; /* Dark green text on secondary */
+    --muted: 200 60% 92%; /* Pale sky blue for muted backgrounds */
+    --muted-foreground: 200 30% 55%; /* Medium grayish blue for muted text */
+    --accent: 150 65% 60%; /* Brighter, minty green */
+    --accent-foreground: 150 25% 15%; /* Dark green/teal text on accent */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 200 50% 88%; /* Light blue-gray border */
+    --input: 200 50% 94%; /* Very light blue-gray input background */
+    --ring: 190 70% 60%; /* Primary color for focus rings */
+    --chart-1: 190 70% 50%;
+    --chart-2: 130 60% 50%;
+    --chart-3: 160 65% 55%;
+    --chart-4: 210 70% 60%;
+    --chart-5: 100 50% 60%;
+    --radius: 0.5rem;
+    --sidebar-background: 205 60% 94%; /* Light blue for sidebar */
+    --sidebar-foreground: 210 25% 25%;
+    --sidebar-primary: 190 70% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 130 50% 60%;
+    --sidebar-accent-foreground: 130 30% 20%;
+    --sidebar-border: 200 50% 85%;
+    --sidebar-ring: 190 70% 60%;
+  }
+  .dark {
+    --background: 200 50% 15%; /* Dark sky blue */
+    --foreground: 200 20% 88%;  /* Light grayish blue text */
+    --card: 200 40% 20%; /* Slightly lighter dark blue for cards */
+    --card-foreground: 200 20% 88%;
+    --popover: 200 40% 18%;
+    --popover-foreground: 200 20% 88%;
+    --primary: 170 75% 60%; /* Vibrant cyan/teal */
+    --primary-foreground: 0 0% 100%; 
+    --secondary: 130 50% 45%; /* Muted dark green */
+    --secondary-foreground: 130 25% 85%; /* Light green text */
+    --muted: 200 30% 28%;
+    --muted-foreground: 200 20% 65%;
+    --accent: 150 70% 70%;  /* Brighter mint green */
+    --accent-foreground: 150 30% 10%; /* Very dark text on accent */
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 200 30% 35%;
+    --input: 200 30% 32%;
+    --ring: 170 75% 65%; 
+    --chart-1: 170 70% 60%;
+    --chart-2: 130 55% 55%;
+    --chart-3: 150 65% 65%;
+    --chart-4: 210 60% 70%;
+    --chart-5: 100 45% 65%;
+    --sidebar-background: 200 45% 12%; /* Very dark blue for sidebar */
+    --sidebar-foreground: 200 20% 80%;
+    --sidebar-primary: 170 75% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 130 50% 40%;
+    --sidebar-accent-foreground: 130 25% 80%;
+    --sidebar-border: 200 30% 30%;
+    --sidebar-ring: 170 75% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom gradient background */
+body.gradient-bg {
+  background: linear-gradient(to bottom right, hsl(203, 100%, 92%), hsl(130, 70%, 90%));
+  /* Light sky blue: hsl(203, 100%, 92%) */
+  /* Light green: hsl(130, 70%, 90%) */
+}
